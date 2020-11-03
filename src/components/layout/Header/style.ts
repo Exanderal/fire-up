@@ -21,11 +21,8 @@ export const Carousel = styled(Slider)`
       }
     }
   }
-  .slick-next {
-    right: 25px;
-  }
+  .slick-next,
   .slick-prev {
-    left: 25px;
-    z-index: 1;
+    display: none;
   }
 `;
