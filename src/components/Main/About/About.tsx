@@ -20,7 +20,6 @@ const About: FC = () => {
   return (
     <AboutContainer maxWidth="md">
       <GridWrapper>
-        {/* <Box1>Text Box</Box1> */}
         <Box
           gridArea="1 / 1 / 2 / 2"
           margin="0 -20px -20px 0"

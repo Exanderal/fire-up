@@ -56,11 +56,4 @@ const Gallery: FC = () => {
   );
 };
 
-// const GalleryBoxes = styled.div`
-/* @media only screen and (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  } */
-// `;
-
 export default Gallery;
