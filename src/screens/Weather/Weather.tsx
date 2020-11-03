@@ -1,10 +1,11 @@
 import React, { FC } from "react";
+import Navbar from "../../components/layout/Navbar";
 
 const Weather: FC = () => {
   return (
-    <div>
-      <h1>Weather</h1>
-    </div>
+    <>
+      <Navbar active="weather" />
+    </>
   );
 };
 
