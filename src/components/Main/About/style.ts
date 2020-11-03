@@ -37,6 +37,7 @@ export const GridWrapper = styled.div`
 
 export const TextBox = styled.div<TextBoxProps>`
   background: url(${pattern}) white;
+  background-position: bottom;
   position: relative;
   padding: 1rem 2rem;
   grid-area: 2 / 2 / 3 / 3;
@@ -93,6 +94,7 @@ export const Box = styled.div<BoxProps>`
     @media (max-width: 480px) {
       top: -3px;
       bottom: 0;
+      background-color: ${(props) => props.theme.color.backgroundGrey};
     }
   }
   :hover {
@@ -104,6 +106,9 @@ export const Box = styled.div<BoxProps>`
     ::after {
       display: block;
     }
+    @media (max-width: 480px) {
+      background-color: ${(props) => props.theme.color.backgroundGrey};
+    }
   }
   @media (max-width: 768px) {
     margin: 0;
@@ -113,6 +118,8 @@ export const Box = styled.div<BoxProps>`
     grid-area: ${(props) => (props.index === 2 ? "2 / 3 / 4 / 4" : "")};
     grid-area: ${(props) => (props.index === 3 ? "2 / 5 / 4 / 6" : "")};
     grid-area: ${(props) => (props.index === 4 ? "2 / 7 / 4 / 8" : "")};
+    background-color: ${(props) =>
+      props.active ? props.theme.color.backgroundGrey : props.color};
   }
 `;
 export const TextParagraph = styled.p`

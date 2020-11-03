@@ -15,6 +15,7 @@ type BoxProps = {
   desc?: string;
   color: string;
   alt: string;
+  order: number;
 };
 
 const GalleryBox: FC<BoxProps> = ({
@@ -24,10 +25,11 @@ const GalleryBox: FC<BoxProps> = ({
   alt,
   tabletImg = "",
   phoneImg = "",
+  order,
 }) => {
   const hasCaption = desc !== "" ? true : false;
   return (
-    <BoxContainer>
+    <BoxContainer order={order}>
       <BoxHeader color={color} />
       <BoxWrapper hasCaption={hasCaption}>
         {tabletImg !== "" ? (

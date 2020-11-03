@@ -13,12 +13,19 @@ type WrapperProps = {
   hasCaption: boolean;
 };
 
-export const BoxContainer = styled.figure`
+type ContainerProps = {
+  order: number;
+};
+
+export const BoxContainer = styled.figure<ContainerProps>`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.color.white};
   margin: 0;
   padding: 0;
+  @media (max-width: 1000px) and (min-width: 600px) {
+    order: ${(props) => props.order};
+  }
 `;
 
 export const BoxWrapper = styled.div<WrapperProps>`
@@ -32,14 +39,6 @@ export const BoxWrapper = styled.div<WrapperProps>`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    picture {
-      margin-left: ${(props) => (props.hasCaption ? "0" : "2.5rem")};
-    }
-  }
-  @media only screen and (max-width: 600px) {
-    picture {
-      margin-left: 0;
-    }
   }
 `;
 
@@ -53,11 +52,15 @@ export const BoxImg = styled.img<WrapperProps>`
   max-width: 100%;
   height: auto;
   @media only screen and (max-width: 1000px) and (min-width: 600px) {
-    padding: ${(props) => (props.hasCaption ? "1rem" : "0")};
+    padding: 0.5rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: ${(props) => (props.hasCaption ? ".5rem" : "0")};
   }
 `;
 
 export const BoxCaption = styled.figcaption<CaptionProps>`
+  display: ${(props) => (props.hasCaption ? "block" : "none")};
   text-transform: uppercase;
   font-size: ${(props) => props.theme.fontSize.md};
   padding: ${(props) => (props.hasCaption ? "0 2rem 2rem" : 0)};

@@ -24,13 +24,15 @@ const Gallery: FC = () => {
         phoneImg={figurePhone_1}
         alt="img"
         color="#8393ca"
+        order={1}
       />
       <GalleryBox
         image={figure_2}
         tabletImg={figureTablet_2}
         phoneImg={figurePhone_2}
         alt="img"
-        color="#faad81"
+        color="#b9a497"
+        order={3}
       />
       <GalleryBox
         image={figure_3}
@@ -39,6 +41,7 @@ const Gallery: FC = () => {
         alt="img"
         desc="Box caption"
         color="#a3d49c"
+        order={2}
       />
       <GalleryBox
         image={figure_4}
@@ -47,6 +50,7 @@ const Gallery: FC = () => {
         alt="img"
         desc="Box caption"
         color="#e5b6e7"
+        order={4}
       />
     </GalleryContainer>
   );
