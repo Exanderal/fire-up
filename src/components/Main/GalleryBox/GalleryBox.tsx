@@ -40,11 +40,21 @@ const GalleryBox: FC<BoxProps> = ({
               srcSet={tabletImg}
               media="only screen and (max-width: 1000px) and (min-width: 600px)"
             />
-            <BoxImg alt={alt} src={phoneImg} hasCaption={hasCaption} />
+            <BoxImg
+              alt={alt}
+              src={phoneImg}
+              hasCaption={hasCaption}
+              loading="lazy"
+            />
           </picture>
         ) : (
           <picture>
-            <BoxImg alt={alt} src={image} hasCaption={hasCaption} />
+            <BoxImg
+              alt={alt}
+              src={image}
+              hasCaption={hasCaption}
+              loading="lazy"
+            />
           </picture>
         )}
         <BoxCaption color={color} hasCaption={hasCaption}>

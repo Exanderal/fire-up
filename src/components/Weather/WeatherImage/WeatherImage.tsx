@@ -24,7 +24,6 @@ const WeatherImage: FC = ({ children }) => {
     setColor(color);
   };
 
-  console.log("reloading");
   const [whiteColor, blackColor] = ["white", "black"];
   useEffect(() => {
     if (weatherData.main) {

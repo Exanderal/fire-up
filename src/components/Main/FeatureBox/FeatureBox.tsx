@@ -13,7 +13,7 @@ type Props = {
 const FeatureBox: FC<Props> = ({ image, leftSide = false }) => {
   return (
     <BoxImage leftSide={leftSide}>
-      <Image src={image} />;
+      <Image src={image} loading="lazy" />;
       <FeatureIcon src={featureIconLeft} leftSide={leftSide} />
     </BoxImage>
   );

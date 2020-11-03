@@ -9,6 +9,7 @@ import Description from "../../components/Weather/WeatherDescription";
 import WeatherForm from "../../components/Weather/WeatherForm";
 import WeatherImage from "../../components/Weather/WeatherImage";
 import Modal from "../../components/Modal";
+import Loader from "../../components/Loader";
 
 import { WeatherContainer, Wrapper, ImageText, ImageTextRight } from "./style";
 
@@ -85,7 +86,7 @@ const Weather: FC = () => {
           </WeatherContainer>
         </>
       ) : weatherReqStatus.status === REQUEST_STATUS.PENDING ? (
-        <div>Loading...</div>
+        <Loader />
       ) : (
         <>
           <WeatherImage>

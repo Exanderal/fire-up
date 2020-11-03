@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container } from "@material-ui/core";
+import pattern from "../../../images/Pattern.png";
 
 type BoxProps = {
   gridArea: string;
@@ -35,7 +36,7 @@ export const GridWrapper = styled.div`
 `;
 
 export const TextBox = styled.div<TextBoxProps>`
-  background-color: white;
+  background: url(${pattern}) white;
   position: relative;
   padding: 1rem 2rem;
   grid-area: 2 / 2 / 3 / 3;
