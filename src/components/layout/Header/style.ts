@@ -23,6 +23,6 @@ export const Carousel = styled(Slider)`
   }
   .slick-next,
   .slick-prev {
-    display: none;
+    display: none !important;
   }
 `;
