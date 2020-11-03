@@ -1,16 +1,21 @@
-import React, { useContext, FC } from "react";
-import WeatherContext from "../../../context/WeatherContext";
+import React, { FC, useState } from "react";
 
 import { FormWrapper, WeatherBtn, WeatherInput } from "./style";
 
 type Props = {
-  getWeatherData: () => {};
+  getWeatherData: (city: string) => {};
 };
 
 const WeatherForm: FC<Props> = ({ getWeatherData }) => {
-  const { city, setCity } = useContext(WeatherContext);
+  const [city, setCity] = useState("");
+
   return (
-    <FormWrapper onSubmit={getWeatherData}>
+    <FormWrapper
+      onSubmit={(e) => {
+        e.preventDefault();
+        getWeatherData(city);
+      }}
+    >
       <WeatherInput
         placeholder="City"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,7 +23,7 @@ const WeatherForm: FC<Props> = ({ getWeatherData }) => {
         }}
         value={city}
       />
-      <WeatherBtn>Search</WeatherBtn>
+      <WeatherBtn type="submit">Search</WeatherBtn>
     </FormWrapper>
   );
 };

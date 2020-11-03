@@ -14,7 +14,6 @@ import { WeatherContainer, Wrapper, ImageText, ImageTextRight } from "./style";
 
 const Weather: FC = () => {
   const {
-    city,
     weatherData,
     setWeatherData,
     color,
@@ -27,7 +26,7 @@ const Weather: FC = () => {
     message: "",
   });
 
-  const getWeatherData = async () => {
+  const getWeatherData = async (city: string) => {
     setWeatherReqStatus({
       status: REQUEST_STATUS.PENDING,
       message: "",
@@ -37,13 +36,11 @@ const Weather: FC = () => {
       setSearchedCity(city);
       setModalShown(false);
       setWeatherData(data);
-      console.log("heresd");
       setWeatherReqStatus({
         status: REQUEST_STATUS.SUCCESS,
         message: "",
       });
     } catch (err) {
-      console.log(err);
       setWeatherReqStatus({
         status: REQUEST_STATUS.FAILED,
         message: err,
@@ -64,8 +61,7 @@ const Weather: FC = () => {
         message: "",
       });
     }
-    //eslint-disable-next-line
-  }, []);
+  }, [weatherData]);
 
   return (
     <Wrapper>

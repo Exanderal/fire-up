@@ -1,4 +1,4 @@
-import React, { FC, useContext } from "react";
+import React, { FC, useContext, useEffect } from "react";
 import WeatherContext from "../../../context/WeatherContext";
 import { WEATHER_STATUS } from "../../../utils/weatherStatus";
 
@@ -18,45 +18,52 @@ const WeatherImage: FC = ({ children }) => {
   const { weatherData, mainPicture, setMainPicture, setColor } = useContext(
     WeatherContext
   );
+
   const setWeatherImages = (img: string, color: string) => {
     setMainPicture(img);
     setColor(color);
   };
-  if (weatherData.main) {
-    const mainWeather = weatherData.weather[0].main.toLowerCase();
-    switch (mainWeather) {
-      case WEATHER_STATUS.CLEAR:
-        setWeatherImages(Clear, "white");
-        break;
-      case WEATHER_STATUS.CLOUDS:
-        setWeatherImages(Clouds, "white");
-        break;
-      case WEATHER_STATUS.DUST:
-        setWeatherImages(Dust, "black");
-        break;
-      case WEATHER_STATUS.HAZE:
-        setWeatherImages(Haze, "black");
-        break;
-      case WEATHER_STATUS.MIST:
-        setWeatherImages(Mist, "white");
-        break;
-      case WEATHER_STATUS.RAIN:
-        setWeatherImages(Rain, "white");
-        break;
-      case WEATHER_STATUS.SAND:
-        setWeatherImages(Sand, "white");
-        break;
-      case WEATHER_STATUS.SNOW:
-        setWeatherImages(Snow, "white");
-        break;
-      case WEATHER_STATUS.DRIZZLE:
-        setWeatherImages(Drizzle, "white");
-        break;
-      default:
-        setWeatherImages(Clear, "white");
-        break;
-    }
-  }
+
+  console.log("reloading");
+  const [whiteColor, blackColor] = ["white", "black"];
+  useEffect(() => {
+    if (weatherData.main) {
+      const mainWeather = weatherData.weather[0].main.toLowerCase();
+      switch (mainWeather) {
+        case WEATHER_STATUS.CLEAR:
+          setWeatherImages(Clear, whiteColor);
+          break;
+        case WEATHER_STATUS.CLOUDS:
+          setWeatherImages(Clouds, whiteColor);
+          break;
+        case WEATHER_STATUS.DUST:
+          setWeatherImages(Dust, blackColor);
+          break;
+        case WEATHER_STATUS.HAZE:
+          setWeatherImages(Haze, blackColor);
+          break;
+        case WEATHER_STATUS.MIST:
+          setWeatherImages(Mist, whiteColor);
+          break;
+        case WEATHER_STATUS.RAIN:
+          setWeatherImages(Rain, whiteColor);
+          break;
+        case WEATHER_STATUS.SAND:
+          setWeatherImages(Sand, whiteColor);
+          break;
+        case WEATHER_STATUS.SNOW:
+          setWeatherImages(Snow, whiteColor);
+          break;
+        case WEATHER_STATUS.DRIZZLE:
+          setWeatherImages(Drizzle, whiteColor);
+          break;
+        default:
+          setWeatherImages(Clear, whiteColor);
+          break;
+      }
+    } //eslint-disable-next-line
+  }, [weatherData]);
+
   return <ImageBackground image={mainPicture}>{children}</ImageBackground>;
 };
 

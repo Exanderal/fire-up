@@ -9,7 +9,6 @@ import Weather from "./screens/Weather";
 import Clear from "./images/weather/clear.jpg";
 
 function Router() {
-  const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState({} as IWeather);
   const [searchedCity, setSearchedCity] = useState("");
   const [mainPicture, setMainPicture] = useState(Clear);
@@ -18,8 +17,6 @@ function Router() {
   return (
     <WeatherContext.Provider
       value={{
-        city,
-        setCity,
         weatherData,
         setWeatherData,
         mainPicture,

@@ -15,7 +15,7 @@ import WindIcon from "../../../images/weather/wind.png";
 import HumidityIcon from "../../../images/weather/humidityIcon.png";
 
 type Props = {
-  getWeatherData: () => {};
+  getWeatherData: (city: string) => {};
 };
 
 const WeatherDescription: FC<Props> = ({ getWeatherData }) => {
