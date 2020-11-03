@@ -1,5 +1,7 @@
 import React, { FC } from "react";
+
 import { BoxImage, Image, FeatureIcon } from "./style";
+
 import featureIconLeft from "../../../images/featureIconLeft.png";
 
 type Props = {

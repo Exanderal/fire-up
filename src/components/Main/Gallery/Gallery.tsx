@@ -1,5 +1,9 @@
 import React, { FC } from "react";
+
+import GalleryBox from "../GalleryBox";
+
 import { GalleryContainer } from "./style";
+
 import figure_1 from "../../../images/figure_1.png";
 import figure_2 from "../../../images/figure_2.png";
 import figure_3 from "../../../images/figure_3.png";
@@ -11,7 +15,6 @@ import figurePhone_2 from "../../../images/figure_phone_2.png";
 import figurePhone_3 from "../../../images/figure_phone_3.png";
 import figurePhone_4 from "../../../images/figure_phone_4.png";
 
-import GalleryBox from "../GalleryBox";
 const Gallery: FC = () => {
   return (
     <GalleryContainer maxWidth="md">

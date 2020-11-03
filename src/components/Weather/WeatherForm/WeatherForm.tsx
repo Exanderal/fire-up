@@ -1,5 +1,6 @@
 import React, { useContext, FC } from "react";
 import WeatherContext from "../../../context/WeatherContext";
+
 import { FormWrapper, WeatherBtn, WeatherInput } from "./style";
 
 type Props = {

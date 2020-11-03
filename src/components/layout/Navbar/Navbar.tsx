@@ -1,6 +1,9 @@
 import React, { FC } from "react";
+
+import BurgerMenu from "../BurgerMenu";
+
 import fireUpLogo from "../../../images/fireUpLogo.png";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+
 import {
   NavbarContainer,
   NavbarItem,

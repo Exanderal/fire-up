@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Icon from "../../../images/ListIcon.png";
+
 import {
   HiddenIndex,
   ItemDescription,
@@ -10,6 +10,8 @@ import {
   ListWrapper,
   OrderedList,
 } from "./style";
+
+import Icon from "../../../images/ListIcon.png";
 
 const FeatureList: FC = () => {
   const generateList = () => {

@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 import HeaderItem from "../HeaderItem";
+
+import { Carousel } from "./style";
+
 import backgroundHeader from "../../../images/headerImage.png";
 import backgroundHeader_2 from "../../../images/headerImage_2.png";
 import backgroundHeader_3 from "../../../images/headerImage_3.png";
-import { Carousel } from "./style";
 
 const Header: FC = () => {
   return (

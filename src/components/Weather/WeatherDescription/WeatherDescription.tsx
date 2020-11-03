@@ -1,15 +1,18 @@
 import React, { FC, useContext } from "react";
+import WeatherContext from "../../../context/WeatherContext";
+
+import WeatherForm from "../WeatherForm";
+
 import {
   TemperatureHeading,
   TemperatureWrapper,
   WeatherContainer,
   WeatherIcon,
 } from "./style";
+
 import TempIcon from "../../../images/weather/thermometer.png";
 import WindIcon from "../../../images/weather/wind.png";
 import HumidityIcon from "../../../images/weather/humidityIcon.png";
-import WeatherForm from "../WeatherForm";
-import WeatherContext from "../../../context/WeatherContext";
 
 type Props = {
   getWeatherData: () => {};

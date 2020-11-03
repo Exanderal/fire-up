@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import WeatherContext from "./context/WeatherContext";
 import { IWeather } from "./interfaces/IWeather";
-import Clear from "./images/weather/clear.jpg";
+
 import Main from "./screens/Main";
 import Weather from "./screens/Weather";
+
+import Clear from "./images/weather/clear.jpg";
 
 function Router() {
   const [city, setCity] = useState("");

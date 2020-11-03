@@ -1,6 +1,7 @@
 import React, { FC, useContext } from "react";
 import WeatherContext from "../../../context/WeatherContext";
 import { WEATHER_STATUS } from "../../../utils/weatherStatus";
+
 import { ImageBackground } from "./style";
 
 import Clear from "../../../images/weather/clear.jpg";

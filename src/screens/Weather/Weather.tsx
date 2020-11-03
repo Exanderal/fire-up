@@ -1,16 +1,16 @@
 import React, { FC, useContext, useEffect, useState } from "react";
-
 import { IWeather } from "../../interfaces/IWeather";
 import { getCurrentWeather } from "../../rest/weather";
 import WeatherContext from "../../context/WeatherContext";
 import { REQUEST_STATUS } from "../../utils/requestStatus";
 
-import { WeatherContainer, Wrapper, ImageText, ImageTextRight } from "./style";
 import Navbar from "../../components/layout/Navbar";
 import Description from "../../components/Weather/WeatherDescription";
 import WeatherForm from "../../components/Weather/WeatherForm";
 import WeatherImage from "../../components/Weather/WeatherImage";
 import Modal from "../../components/Modal";
+
+import { WeatherContainer, Wrapper, ImageText, ImageTextRight } from "./style";
 
 const Weather: FC = () => {
   const {

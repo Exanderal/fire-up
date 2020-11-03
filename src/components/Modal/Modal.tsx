@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+
 import { ModalOverlay, ModalButton, ModalContainer } from "./style";
 
 type Props = {

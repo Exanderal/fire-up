@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Router from "./Router";
-import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "styled-components";
 import { StylesProvider } from "@material-ui/core";
+import reportWebVitals from "./reportWebVitals";
+
+import Router from "./Router";
 import theme from "./theme";
 import GlobalStyle from "./GlobalStyle";
 

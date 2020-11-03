@@ -1,8 +1,11 @@
 import React, { FC } from "react";
+
 import HeaderBox from "../HeaderBox";
+
 import Icon1 from "../../../images/headerIcon_1.png";
 import Icon2 from "../../../images/headerIcon_2.png";
 import Icon3 from "../../../images/headerIcon_3.png";
+
 import {
   BackgroundImage,
   BoxWrapper,

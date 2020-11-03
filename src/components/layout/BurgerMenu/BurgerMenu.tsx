@@ -1,6 +1,8 @@
 import React, { FC, useState } from "react";
-import BurgerIcon from "../../../images/menu.svg";
+
 import { MenuIcon, MenuLink, MenuList, MenuOverlay } from "./style";
+
+import BurgerIcon from "../../../images/menu.svg";
 
 type MenuProps = {
   active: string;
