@@ -1,6 +1,6 @@
-# Fire Up Recrutation Projects
+# Fire Up Recruitment Process
 
-This projects was created as a part of recrutation process in Fire Up Company.
+This projects was created as a part of recruitment process in Fire Up Company.
 Design was provided by company I had to create my own version of weather app.
 
 ## Live version
